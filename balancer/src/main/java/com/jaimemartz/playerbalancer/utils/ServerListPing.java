@@ -23,9 +23,6 @@ public final class ServerListPing {
 
     private static Gson gson = new GsonBuilder()
             .registerTypeAdapter(BaseComponent.class, new ComponentSerializer())
-            .registerTypeAdapter(TextComponent.class, new TextComponentSerializer())
-            .registerTypeAdapter(TranslatableComponentSerializer.class, new TranslatableComponentSerializer())
-            .registerTypeAdapter(ComponentStyle.class, new ComponentStyleSerializer() )
             .create();
 
     private static int readVarInt(DataInputStream in) throws IOException {
