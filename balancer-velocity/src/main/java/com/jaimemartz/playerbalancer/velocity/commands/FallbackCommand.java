@@ -1,5 +1,9 @@
 package com.jaimemartz.playerbalancer.velocity.commands;
 
+import static com.jaimemartz.playerbalancer.velocity.utils.MessageUtils.safeNull;
+
+import java.util.Optional;
+
 import com.google.common.collect.Iterables;
 import com.jaimemartz.playerbalancer.velocity.PlayerBalancer;
 import com.jaimemartz.playerbalancer.velocity.connection.ConnectionIntent;
@@ -12,12 +16,9 @@ import com.velocitypowered.api.command.SimpleCommand;
 import com.velocitypowered.api.proxy.Player;
 import com.velocitypowered.api.proxy.ServerConnection;
 import com.velocitypowered.api.proxy.server.ServerInfo;
+
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
-
-import java.util.Optional;
-
-import static com.jaimemartz.playerbalancer.velocity.utils.MessageUtils.safeNull;
 
 public class FallbackCommand implements SimpleCommand {
     private final PlayerBalancer plugin;

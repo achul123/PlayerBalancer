@@ -141,7 +141,7 @@ public class SectionManager {
             @Override
             public void execute(String sectionName, SectionProps sectionProps, ServerSection section) throws RuntimeException {
                 if (sectionProps.getServerName() != null) {
-                    ServerInfo serverInfo = new ServerInfo("@" + sectionProps.getServerName(), new InetSocketAddress("0.0.0.0", (int) Math.floor(Math.random() * (0xFFFF + 1))));
+                    ServerInfo serverInfo = new ServerInfo(sectionProps.getServerName(), new InetSocketAddress("0.0.0.0", (int) Math.floor(Math.random() * (0xFFFF + 1))));
                     RegisteredServer sectionServer = plugin.getProxyServer().registerServer(serverInfo);
                     plugin.getSectionManager().registerServer(sectionServer, section);
                     section.setServer(sectionServer);
